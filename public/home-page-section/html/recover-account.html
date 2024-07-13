@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Recover Account </title>
+        <link rel="stylesheet" href="../css/sign-up-in-index.css">
+    </head>
+    <body class="recover-account-page">
+        <!-------------------- BLUE DIVIDER -------------------->
+        <div class="blue-div-recover">&nbsp;</div>
+        <!--------------------- SIGN UP ------------------------>
+        <div class="recover">
+            <div>
+                <a href="./home-view.html"><button class="button" id="back-button"> Back to Home Page </button></a>
+            </div>
+            <div class="recover-container">
+                <div class="recover-message">
+                    <span id="message-1"> FORGOT PASSWORD? </span><br>
+                    <span id="message-2"> Enter the email you used to sign up below.</span>
+                </div>
+                <form action="./recover-account-success.html" class="recover-form">
+                    <!-------------------- FIELD -------------------->
+                    <div class="recover-email-field">
+                        <label for="email"> Email Address </label><br>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required><br>
+                    </div>
+                    <!--------------------- BUTTON --------------------->
+                    <div class="submit-button">
+                        <input type="submit" class="button" id="recover-button" value="Recover Account" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Staatliches|Kanit);
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;700&display=swap');
+
+
+:root {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+.crud-container {
+  text-align: center;
+}
+
+.crud-button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Modal styles */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  align-content: center;
+  width: 100%; /* Change to desired width */
+  height: 120%; /* Change to desired height */
+  overflow: auto; /* or overflow: scroll; */
+  margin: -80px auto; /* Adjust vertical and horizontal centering as needed */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(255, 195, 43, 1);
+  width: 70%;
+  height: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(40, 42, 55, 1);
+}
+
+.crud-title {
+  margin: 20px;
+  font-weight: 800;
+  margin-left: 30px;
+  font-size: 35px;
+}
+
+.white {
+  color: white;
+}
+
+.yellow {
+  color: rgba(255, 195, 43, 1);
+}
+
+
+@keyframes animatetop {
+  from {top:-300px;}
+  to {top:0}
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 30px; 
+  height: 30px; 
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.close-button:hover {
+  width: 30px; 
+  height: 30px;
+  content: url('../assets/est/content-icons/close-filled.png'); 
+  transform: scale(1.2);
+}
+
+.create-establishment-form, .update-establishment-form {
+  margin: 20px;
+  padding: 5px;
+}
+
+label {
+  font-family: 'Kanit';
+  line-height: 20px;
+  font-weight: 500;
+}
+
+
+
+#description-input, #update-description {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 9px;
+  border: 2px solid #212431;
+  border-radius: 6px;
+  font-family: 'Kanit';
+  font-size: 14px;
+  color: 212431;
+  resize: none;
+}
+
+
+#est-name-input, #tags-input, #est-id-input, #update-est-name,
+#update-tags {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  margin-bottom: 9px;
+  border: 2px solid #212431;
+  border-radius: 6px;
+  font-family: 'Kanit';
+  font-size: 14px;
+  color: 212431;
+}
+
+#cover-image-input, #update-cover-image {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  margin-bottom: 9px;
+  border: 2px solid #212431;
+  border-radius: 6px;
+  font-family: 'Kanit';
+  font-size: 14px;
+  color: 212431;
+}
+
+.create-error-message, .update-error-message, .delete-error-message {
+  text-align: center;
+  background-color: #50ae64;
+  color: white;
+  width: 100%;
+  padding: 3px;
+  font-weight: 500;
+}
+
+#submit-create-establishment, #submit-update-establishment {
+  width: 100px;
+  border: 3px solid #B10F2E;
+  background: #B10F2E;
+  color: #FFFFFF;
+  font-family: 'Staatliches';
+  font-size: 1em;
+  border-radius: 50px;
+  height: 29px;
+  width: 140px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+<div class="review-display">
+    <div class=""><img src="../../../data/uploads/{{this.profilePictureDisplay}}" width="40px" height="40px" class="circle"></div>
+    <div class="reviewer-display">
+        <div id="name-display"> {{this.nameDisplay}} </div>
+        <div id="label-display"> Reviewer </div>
+        <div class="rating-and-date"> 
+            <div id="rating-display"> {{this.ratingDisplay}} ★ </div>
+            <div id="dot-display">•</div>
+            <div id="date-display"> {{this.dateDisplay}} </div>
+        </div>
+    </div>
+    <div class="upvote-container">
+        <div class="upvote-display" onclick="(this, '{{this.upvotesDisplay}}')">&nbsp;</div>
+        <div class="upvote-count-display"> {{this.upvotesDisplay}} </div>
+    </div>
+</div>
+<div id="review-text-display"> {{this.reviewDisplay}} </div>

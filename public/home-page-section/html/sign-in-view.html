@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sign In </title>
+        
+        <link rel="stylesheet" href="../css/sign-up-in-index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	    <script type="module" src="../js/sign-in.js"></script>
+    </head>
+    <body class="sign-in-page">
+        <!-------------------- BLUE DIVIDER -------------------->
+        <div class="blue-div-sign-in">&nbsp;</div>
+        <!--------------------- SIGN UP ------------------------>
+        <div class="sign-up">
+            <div class="welcome-container">
+                <a href="home-view.html"><button class="button" id="back-button"> Back to Home Page </button></a>
+                <div class="heading">
+                    <div class="welcome-message"> Welcome Back to </div>
+                    <div class="taft-10"> Taft 10! </div>
+                </div>
+            </div>
+            <div class="sign-in-container">
+                <div class="sign-in-message">
+                    <span id="message-1"> Sign In </span><br>
+                    <span id="message-2"> Don't have an account yet? </span>
+                    <a href="sign-up-view.html" class="sign-up-link"> Sign Up </a>
+                </div>
+                <form action="home-view-user.html" class="sign-in-form">
+                    <!-------------------- FIELDS -------------------->
+                    <div class="fields-sign-in">
+                        <label for="username"> Username </label><br>
+                        <input type="text" id="username" name="username" required><br>
+                        <label for="password"> Password </label>
+                        <input type="password" name="password" id="password" />
+                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    </div>
+                    <!------------------- REMEMBER ME ------------------>
+                    <div class="remember-me">
+                        <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                        <label for="checkbox"> Remember Me </label><br>
+                    </div>
+                    <!----------------- FORGOT PASSWORD ---------------->
+                    <div class="forgot-password">
+                        <a href="recover-account.html" id="forgot-password-link">I forgot my password</a>
+                    </div>
+                    <!--------------------- BUTTON --------------------->
+                    <div class="submit-button">
+                        <input type="submit" class="button" name="sign-up-submit" id="button-text" value="Sign In">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,362 @@
+/* Import Fonts */
+@import url(https://fonts.googleapis.com/css?family=Staatliches|Kanit);
+
+/* Root */
+:root {
+    font-family: 'Kanit';
+    background-color: #FFC32B;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+    
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5d5c5c;
+}
+
+.recover-success-container {
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0; 
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*********************************************
+                    Content
+*********************************************/
+
+body {
+    display: flex;
+    height: 100%;
+    animation: transitionIn 0.3s;
+}
+
+.blue-div-sign-up {
+    width: 30%;
+    background-color:  #282A37;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 1250px;
+}
+
+.blue-div-sign-in {
+    width: 30%;
+    background-color:  #282A37;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 120%;
+}
+
+.blue-div-recover {
+    width: 30%;
+    background-color:  #282A37;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.sign-up {
+    position: absolute;
+    left: 40%;
+    top: 100px;
+    right: 40px;
+}
+
+.recover {
+    position: absolute;
+    left: 40%;
+    top: 100px;
+    right: 40px;
+}
+
+.button {
+    font-family: 'Staatliches';
+    font-size: 1em;
+    border-radius: 50px;
+    height: 29px;
+    width: 140px;
+    text-decoration: none;
+    text-align: center;
+}
+
+button {
+    font-family: 'Staatliches';
+    font-size: 1em;
+    border-radius: 50px;
+    height: 29px;
+    width: 140px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#back-button {
+    font-family: 'Staatliches';
+    background: none;
+    color: #B10F2E;
+    border: 3px solid #B10F2E;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background: rgb(219, 174, 61);
+    color: #B10F2E;
+    border: 3px solid #B10F2E;
+    transition: .5s ease;
+}
+
+.heading {
+    font-family: 'Staatliches';
+    line-height: 65px;
+}
+
+.heading > .welcome-message {
+    position: relative;
+    top: 10px;
+    font-size: 35px;
+}
+
+.heading > .taft-10 {
+    position: relative;
+    top: 5px;
+    font-size: 90px;
+    color: #B10F2E;
+}
+
+/*********************************************
+                Fields/Container
+*********************************************/
+.sign-up-container {
+    position: absolute;
+    width: 400px;
+    top: 220px;
+    height: 740px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.25);
+}
+
+.sign-in-container {
+    position: absolute;
+    top: 220px;
+    height: 340px;
+    width: 400px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.25);
+}
+
+.recover-container {
+    position: absolute;
+    top: 120px;
+    height: 230px;
+    width: 400px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.25);
+}
+
+.recover-success-container {
+    position: absolute;
+    top: 120px;
+    height: 230px;
+    width: 400px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.25);
+}
+
+.sign-up-message, .sign-in-message, .recover-message {
+    line-height: 23px;
+    height: 80px;
+    padding-left: 20px;
+}
+
+.recover-message > #message-2 {
+    color: #6f6f6f;
+}
+
+#message-1 {
+    font-family: 'Staatliches';
+    font-size: 40px;
+}
+
+.sign-in-link, .sign-up-link, #terms-of-service, #privacy-policy, #forgot-password-link {
+    color: #EF8354;
+    text-decoration: none;
+}
+
+.forgot-password {
+    position: relative;
+    top: 15px;
+    text-align: center;
+}
+
+.asterisk {
+    color: #B10F2E;
+}
+
+.fields-sign-up, .fields-sign-in {
+    line-height: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#username, #email, #lname, #fname, #number, #password, #confirm-password, #description, #file {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 9px;
+    border: 2px solid #212431;
+    border-radius: 6px;
+    font-family: 'Kanit';
+    font-size: 14px;
+    color: 212431;
+}
+
+#description {
+    resize: none;
+    height: 100px;
+}
+
+#file {
+    display: inline-block;
+    padding: 2px; 
+    cursor: pointer;
+    height: 30px;
+}
+
+#file::file-selector-button {
+    border-radius: 5px;
+    background-color: #212431;
+    border: 1px solid #212431;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-family: 'Kanit';
+}
+
+.name {
+    display: flex;
+    gap: 8px;
+}
+
+.name > div {
+    width: 50%;
+}
+
+.name > div + div {
+    width: 50%;
+}
+
+.checkbox {
+    padding-left: 9px;
+    position: relative;
+    top: 30px;
+    font-size: 13px;
+}
+
+.submit-button {
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#button-text {
+    position: relative;
+    top: 0px;
+    font-size: 17px;
+    background-color: #B10F2E;
+    color: #FFFFFF;
+    z-index: 99;
+}
+
+#sign-in-submit-button {
+    position: relative;
+    bottom: 40px;
+}
+
+#sign-up-submit-button {
+    position: relative;
+    bottom: 25px;
+}
+
+#sign-up-submit-button, #sign-in-submit-button, #recover-button {
+    width: 90px;
+    border: 3px solid #B10F2E;
+    background: #B10F2E;
+    color: #FFFFFF;
+}
+
+#recover-button {
+    position: relative;
+    bottom: 10px;
+    width: 130px;
+}
+
+#sign-up-submit-button:hover, #sign-in-submit-button:hover, #recover-button:hover {
+    background: #c41637;
+    color: #FFFFFF;
+    border: 3px solid #c41637;
+    transition: .5s ease;
+}
+
+.recover-email-field {
+    padding-left: 20px;
+}
+
+.recover-success-message > #message-2 {
+    font-style: italic;
+    color: #6f6f6f;
+    font-size: 14px;
+}
+
+form i {
+    margin-left: -30px;
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
+}
+
+.remember-me {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="../js/est-index.js"></script>
+        <link rel="stylesheet" href="../css/est-index.css">
+        <link rel="stylesheet" href="../css/add-review.css">
+        <link rel="stylesheet" href="../css/view-review.css">
+        <link rel="stylesheet" href="../css/crud-index.css">
+        
+        <title> All Est. View </title>
+    </head>
+
+    <body>
+    <!-------------------- HEADER -------------------->
+    <header class="header">
+        <div class="header-left">
+            <img src="../../global-assets/header/taft-10.png" alt="Taft Logo" class="header-taft-logo">
+            <nav class="header-nav">
+                <a href="../../home-page-section/html/home-view-user.html" class="header-button"> Home </a>
+                <a href="../../home-page-section/html/home-view-user.html#about" class="header-button"> About </a>
+                <a href="#contact" class="header-button">Contact</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="search-bar">
+                <img src="../../global-assets/header/search-icon.png" class="search-icon" alt="search icon"/>
+                <input type="search" class="search-form" placeholder="Search Establishment"/>
+            </div>
+            <div class="profile-icon"></div>
+            <a href="../../home-page-section/html/home-view.html" class="header-signout">LOG OUT</a>
+        </div>
+    </header>
+
+    <!-------------------- BAR CONTAINER -------------------->
+    <div class="bar-container container-template">
+        <div class="bar-title">
+            <span class="white">SORT</span>
+            &nbsp;
+            <span class="yellow">BY</span>
+        </div>
+        
+        <div class="sort-options">
+            <div class="category-dropdown-container">
+                <div class="category-dropdown-title">
+                    Highest Rated
+                </div> 
+                <div class="category-options-container">
+                    <p class="category-option" onclick="changeText(this)">Most Popular</p>
+                    <p class="category-option" onclick="changeText(this)">Most Reviewed</p>
+                    <p class="category-option" onclick="changeText(this)">Highest Rated</p>
+                </div>
+            </div>
+            
+            <div class="price-range-container">
+                <button class="price-button-outer-left">₱</button>
+                <button class="price-button-inner">₱₱</button>
+                <button class="price-button-inner">₱₱₱</button>
+                <button class="price-button-outer-right">₱₱₱₱</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------- TAGS -------------------->
+    <div class="tags-container container-template">
+        <div class="bar-title">Tags:</div>
+        <div class="tagInput">
+            <form id="tagForm">
+                <div class="input-wrap">
+                    <input type="text" placeholder="Add a tag..." id="tag-input" maxlength="25" autocomplete="off"/>
+                </div>
+            </form>
+        </div>
+        <div class="tags"> </div>
+    </div>
+
+
+<!-------------------- CRUD BUTTONS (FOR TESTING) -------------------->
+
+<div class="crud-container">
+    <h1>CRUD Operations</h1>
+    <div class="button-group">
+      <button class="crud-button" id="create-button">Create</button>
+      <button class="crud-button" id="update-button">Update</button>
+      <button class="crud-button" id="delete-button">Delete</button>
+    </div>
+  </div>
+
+
+  <div class="modal" id="create-modal">
+
+        <div class="modal-content">
+
+            <div class="title-container">
+                <div class="crud-title">
+                    <span class="yellow">CREATE</span> 
+                    <span class="white">ESTABLISHMENT</span> 
+                </div>
+        
+                <div class="close-button">
+                    <img src="../assets/est/content-icons/close-white.png" alt="Close" class="close-icon">
+                </div>
+            </div>
+        
+            <div class="create-error-message"></div>
+        
+            <form class="create-establishment-form">
+        
+                <label for="est-name-input">Establishment Title</label>
+                <br>
+                <input type="text" id="est-name-input" name="est-name" required>
+                <br>
+        
+                <label for="price-range">Price Range (Low to High)</label>
+                <br>
+                <input type="range" id="price-range-input" min="1" max="4" value="0" step="1" required> <br>
+            
+                <label for="tags">Tags (Separate by commas)</label>
+                <br>
+                <input type="text" id="tags-input" placeholder="Enter comma-separated tags (e.g., restaurant, Italian)">
+                <br>
+            
+                <label for="description">Establishment Description</label>
+                <br>
+                <textarea id="description-input" placeholder="Write a detailed description of the establishment"></textarea>
+                <br>
+            
+                <label for="cover-image">Cover Image</label>
+                <br>
+                <input type="file" id="cover-image-input" accept="image/*" required>
+                <br>
+                
+                <br>
+                <button type="submit" id="submit-create-establishment">Create</button> 
+            </form>
+        
+        </div>
+    </div>
+
+  <!--
+      /********************** UPDATE **********************/ 
+  -->
+
+    <div class="modal" id="update-modal">
+      <div class="modal-content">
+
+        <div class="title-container">
+            <div class="crud-title">
+              <span class="yellow">UPDATE</span> 
+              <span class="white">ESTABLISHMENT</span> 
+            </div>
+  
+            <div class="close-button">
+              <img src="../assets/est/content-icons/close-white.png" alt="Close" class="close-icon">
+            </div>
+        </div>
+  
+        <div class="update-error-message">TODO: establishment shown below must be dependent on est-owner id</div>
+
+        <form class="update-establishment-form">
+        
+            <label for="est-id-input">[TEST FEATURE] Establishment ID </label>
+            <br>
+            <input type="text" id="est-id-input" name="est-id" required>
+            <br>
+    
+            <label for="update-est-name">Establishment Title</label>
+            <br>
+            <input type="text" id="update-est-name" name="est-name" required>
+            <br>
+
+            <label for="update-price-range">Price Range (Low to High)</label>
+            <br>
+            <input type="range" id="update-price-range" min="1" max="4" value="0" step="1" required> <br>
+
+            <label for="update-tags">Tags (Separate by commas)</label>
+            <br>
+            <input type="text" id="update-tags" placeholder="Enter comma-separated tags (e.g., restaurant, Italian)">
+            <br>
+
+            <label for="update-description">Establishment Description</label>
+            <br>
+            <textarea id="update-description" placeholder="Write a detailed description of the establishment"></textarea>
+            <br>
+        
+            <label for="update-cover-image">Cover Image</label>
+            <br>
+            <input type="file" id="update-cover-image" accept="image/*" required>
+            <br>
+            
+            <br>
+            <button type="submit" id="submit-update-establishment">UPDATE</button> 
+        </form>
+        
+      </div>
+    </div>
+
+  <!--
+      /********************** DELETE **********************/ 
+  -->
+
+    <div class="modal" id="delete-modal"> 
+        <div class="modal-content">
+
+            <div class="title-container">
+                <div class="crud-title">
+                  <span class="yellow">DELETE</span> 
+                  <span class="white">ESTABLISHMENT</span> 
+                </div>
+      
+                <div class="close-button">
+                  <img src="../assets/est/content-icons/close-white.png" alt="Close" class="close-icon">
+                </div>
+            </div>
+      
+            <div class="delete-error-message"></div>
+
+        </div>
+    
+    </div>
+
+  
+
+    <!-------------------- ESTABLISHMENTS CONTENT -------------------->
+    <div class="est-container"> </div>
+
+    <!------------------- ADD ESTABLISHMENT REVIEW ------------------->
+    <div class="add-container"> </div>
+
+    <!----------------- VIEW ESTABLISHMENT'S REVIEWS ----------------->
+    <div class="view-container"> </div>
+
+    
+    <!-------------------- FOOTER -------------------->
+    <footer id="contact">
+        <div class="footer-follow">
+            <span class="footer-text"> Follow Us </span>
+            <ul id="socmed">
+                <a href="https://www.facebook.com/"><li id="facebook"></li></a>
+                <a href="https://www.instagram.com/"><li id="instagram"></li></a>
+                <a href="https://www.twitter.com/"><li id="twitter"></li></a>
+                <a href="https://www.threads.net/"><li id="threads"></li></a>
+                <a href="https://www.youtube.com/"><li id="youtube"></li></a>
+            </ul>
+        </div>
+        <div class="footer-divider"> &nbsp; </div>
+        <div class="footer-contact">
+            <div id="connect">
+                <span class="footer-text"> Connect with Us </span>
+            </div>
+            <div class="contact-container" id="footer-container1">
+                <span class="footer-bold"> taft10@email.com </span>
+                <span class="footer-labels"> Email Address </span>
+            </div><br>
+            <div class="contact-container">
+                <span class="footer-bold"> +63 912 345 6789 </span>
+                <span class="footer-labels"> Contact Number </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<nav>
+    <menu>
+        <a href="#home" class="nav-link"><li> Home </li></a>
+        <a href="#about" class="nav-link"><li> About </li></a>
+        <a href="#contact" class="nav-link"><li> Contact </li></a>
+    </menu>
+    <div id="header-logo"> Taft 10 </div>
+    {{#if currUsername}}
+    <div class="user-view">
+        <div class="header-username-container">
+            <a href='/profile' id="header-username"><div id="my-profile"> {{currUsername}} </div></a>
+            <a href='/log-out' id="log-out-link"><div id="log-out"> Log Out </div></a>
+        </div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    </div>
+    {{else}}
+    <div class="header-buttons">
+        <a href="/sign-up"><button class=button id="sign-up"> Sign Up </button></a>
+        <a href="/sign-in"><button class=button id="sign-in"> Sign In </button></a>
+    </div>
+    {{/if}}
+</nav>

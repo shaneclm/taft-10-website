@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="header-left">
+        <img src={{taft10Logo}} alt="Taft Logo" class="header-taft-logo">
+        <nav class="header-nav">
+            <a href="/home" class="header-button"> Home </a>
+            <a href="/home#about" class="header-button"> About </a>
+            <a href="#contact" class="header-button"> Contact </a>
+        </nav>
+    </div>
+    <div class="header-right">
+        <div class="search-bar">
+            <img src={{searchIcon}} class="search-icon" alt="search icon"/>
+            <input type="search" class="search-form" placeholder="Search Establishment"/>
+        </div>
+        {{#if userExists}}
+            <div class="user-view">
+                <div class="header-username-container">
+                    <a href='/profile' id="header-username"><div id="my-profile"> {{currUsername}} </div></a>
+                    <a href='/log-out' id="log-out-link"><div id="log-out"> Log Out </div></a>
+                </div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            </div>
+        {{else}}
+            <a href="/sign-up"><button class=button id="sign-up"> Sign Up </button></a>
+            <a href="/sign-in"><button class=button id="sign-in"> Sign In </button></a>
+        {{/if}}
+    </div>
+</header>

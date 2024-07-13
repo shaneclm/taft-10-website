@@ -1,0 +1,191 @@
+   
+    <div class="bar-container container-template">
+        <div class="bar-title">
+            <span class="white">SORT</span>
+            &nbsp;
+            <span class="yellow">BY</span>
+        </div>
+        
+        <div class="sort-options">
+            <div class="category-dropdown-container">
+                <div class="category-dropdown-title">
+                    Highest Rated
+                </div> 
+                <div class="category-options-container">
+                    <p class="category-option" onclick="changeText(this)">Most Popular</p>
+                    <p class="category-option" onclick="changeText(this)">Most Reviewed</p>
+                    <p class="category-option" onclick="changeText(this)">Highest Rated</p>
+                </div>
+            </div>
+            
+            <div class="price-range-container">
+                <button class="price-button-outer-left">₱</button>
+                <button class="price-button-inner">₱₱</button>
+                <button class="price-button-inner">₱₱₱</button>
+                <button class="price-button-outer-right">₱₱₱₱</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tags-container container-template">
+        <div class="bar-title">Tags:</div>
+        <div class="tagInput">
+            <form id="tagForm">
+                <div class="input-wrap">
+                    <input type="text" placeholder="Add a tag..." id="tag-input" maxlength="25" autocomplete="off"/>
+                </div>
+            </form>
+        </div>
+        <div class="tags"> </div>
+    </div>
+
+
+<div class="crud-container">
+    <h1>CRUD Operations</h1>
+    <div class="button-group">
+      <button class="crud-button" id="create-button">Create</button>
+      <button class="crud-button" id="update-button">Update</button>
+      <button class="crud-button" id="delete-button">Delete</button>
+    </div>
+  </div>
+
+
+  <div class="modal" id="create-modal">
+
+        <div class="modal-content">
+
+            <div class="title-container">
+                <div class="crud-title">
+                    <span class="yellow">CREATE</span> 
+                    <span class="white">ESTABLISHMENT</span> 
+                </div>
+        
+                <div class="close-button">
+                    <img src="../assets/est/content-icons/close-white.png" alt="Close" class="close-icon">
+                </div>
+            </div>
+        
+            <div class="create-error-message"></div>
+        
+            <form class="create-establishment-form">
+        
+                <label for="est-name-input">Establishment Title</label>
+                <br>
+                <input type="text" id="est-name-input" name="est-name" required>
+                <br>
+        
+                <label for="price-range">Price Range (Low to High)</label>
+                <br>
+                <input type="range" id="price-range-input" min="1" max="4" value="0" step="1" required> <br>
+            
+                <label for="tags">Tags (Separate by commas)</label>
+                <br>
+                <input type="text" id="tags-input" placeholder="Enter comma-separated tags (e.g., restaurant, Italian)">
+                <br>
+            
+                <label for="description">Establishment Description</label>
+                <br>
+                <textarea id="description-input" placeholder="Write a detailed description of the establishment"></textarea>
+                <br>
+            
+                <label for="cover-image">Cover Image</label>
+                <br>
+                <input type="file" id="cover-image-input" accept="image/*" required>
+                <br>
+                
+                <br>
+                <button type="submit" id="submit-create-establishment">Create</button> 
+            </form>
+        
+        </div>
+    </div>
+
+  <!--
+      /********************** UPDATE **********************/ 
+  -->
+
+    <div class="modal" id="update-modal">
+      <div class="modal-content">
+
+        <div class="title-container">
+            <div class="crud-title">
+              <span class="yellow">UPDATE</span> 
+              <span class="white">ESTABLISHMENT</span> 
+            </div>
+  
+            <div class="close-button">
+              <img src="../assets/est/content-icons/close-white.png" alt="Close" class="close-icon">
+            </div>
+        </div>
+  
+        <div class="update-error-message">TODO: establishment shown below must be dependent on est-owner id</div>
+
+        <form class="update-establishment-form">
+        
+            <label for="est-id-input">[TEST FEATURE] Establishment ID </label>
+            <br>
+            <input type="text" id="est-id-input" name="est-id" required>
+            <br>
+    
+            <label for="update-est-name">Establishment Title</label>
+            <br>
+            <input type="text" id="update-est-name" name="est-name" required>
+            <br>
+
+            <label for="update-price-range">Price Range (Low to High)</label>
+            <br>
+            <input type="range" id="update-price-range" min="1" max="4" value="0" step="1" required> <br>
+
+            <label for="update-tags">Tags (Separate by commas)</label>
+            <br>
+            <input type="text" id="update-tags" placeholder="Enter comma-separated tags (e.g., restaurant, Italian)">
+            <br>
+
+            <label for="update-description">Establishment Description</label>
+            <br>
+            <textarea id="update-description" placeholder="Write a detailed description of the establishment"></textarea>
+            <br>
+        
+            <label for="update-cover-image">Cover Image</label>
+            <br>
+            <input type="file" id="update-cover-image" accept="image/*" required>
+            <br>
+            
+            <br>
+            <button type="submit" id="submit-update-establishment">UPDATE</button> 
+        </form>
+        
+      </div>
+    </div>
+
+  <!--
+      /********************** DELETE **********************/ 
+  -->
+
+    <div class="modal" id="delete-modal"> 
+        <div class="modal-content">
+
+            <div class="title-container">
+                <div class="crud-title">
+                  <span class="yellow">DELETE</span> 
+                  <span class="white">ESTABLISHMENT</span> 
+                </div>
+      
+                <div class="close-button">
+                  <img src="../assets/est/content-icons/close-white.png" alt="Close" class="close-icon">
+                </div>
+            </div>
+      
+            <div class="delete-error-message"></div>
+
+        </div>
+    
+    </div>
+
+  
+    <div class="est-container"> </div>
+
+    <div class="add-container"> </div>
+
+    <div class="view-container"> </div>

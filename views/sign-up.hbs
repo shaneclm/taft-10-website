@@ -1,0 +1,64 @@
+<div class="blue-div-sign-up">&nbsp;</div>
+<div class="sign-up">
+    <div class="welcome-container">
+        <a href="/home"><button class="button" id="back-button"> Back to Home Page </button></a>
+        <div class="heading">
+            <div class="welcome-message"> Welcome To </div>
+            <div class="taft-10"> Taft 10! </div>
+        </div>
+    </div>
+    <div class="sign-up-container">
+        <div class="sign-up-message">
+            <span id="message-1"> Sign Up </span><br>
+            <span id="message-2"> Already have an account? </span>
+            <a href="/sign-in" class="sign-in-link"> Sign In </a>
+        </div>
+        <form method="post" action="/sign-up" class="sign-up-form" enctype="multipart/form-data">
+            <div class="fields-sign-up">
+                <label for="username"> Username </label><span class="asterisk">* 
+                    {{#if isValid}}
+                        Username Already Exists!
+                    {{/if}}
+                </span><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="email"> Email Address </label><span class="asterisk">*</span><br>
+                <input type="email" id="email" name="email" required><br>
+                <div class="name">
+                    <div>
+                        <label for="lname"> Last Name </label><span class="asterisk">*</span><br>
+                        <input type="text" id="lname" name="lname" required><br>
+                    </div>
+                    <div>
+                        <label for="fname"> First Name </label><span class="asterisk">*</span><br>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                </div>
+                <label for="description"> Bio </label><span class="asterisk">*</span><br>
+                <textarea id="description" placeholder="Short Description" name="description"></textarea>
+                <label for="number"> Phone Number </label><br>
+                <input type="tel" id="number" name="number" placeholder="09XXXXXXXXX" pattern="[0]{1}[9]{1}[0-9]{2}[0-9]{3}[0-9]{4}"><br>
+                
+                <label for="password"> Password </label><span class="asterisk">*</span>
+                <input type="password" name="password" id="password" />
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
+
+                <label for="confirmPassword"> Confirm Password </label><span class="asterisk">*</span>
+                <input type="password" name="confirmPassword" id="confirm-password" />
+                <i class="bi bi-eye-slash" id="toggleConfirmPassword"></i>
+                
+                <label for="file"> Upload Profile Picture </label><span class="asterisk">*</span>
+                <input type="file" id="file" name="file" accept="image/png, image/jpeg"><br>
+
+                <div>
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                <label for="checkbox"> I want to sign up as an establishment owner </label><br>
+                </div>
+
+            </div>
+
+            <div class="submit-button">
+                <input type="submit" class="button" name="sign-up-submit" id="button-text" value="Sign Up">
+            </div>
+        </form>
+    </div>
+</div>

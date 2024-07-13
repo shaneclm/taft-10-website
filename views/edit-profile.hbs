@@ -1,0 +1,28 @@
+<form action="/edit" method="post" class="edit">
+                            
+    <div class = "edit-profile-container">
+        <div class = "profile">
+            <div class = "profile-container">
+                <img src ="../../data/uploads/{{currentUserPic}}" alt = "Doggo Logo" class = "user-image">
+            </div>
+        </div>
+        
+        <div class = "to-be-edit-container">
+            <label for="username"> Username 
+                {{#if errorMsg}}
+                    &nbsp;&nbsp; (Username Already Exists!)
+                {{/if}}
+            </label><br>
+            <input type="text" id="username" name="username" placeholder={{usernamePlaceholder}}><br>
+        
+            <label for="description"> Description </label><br>
+            <textarea id="description" name="description" placeholder={{bioPlaceholder}}></textarea><br>
+
+            <div class = "buttons">
+                <div class="save-button"><input type="submit" value="SAVE CHANGES" class="save" id="save-button"> </div> 
+                <div class="cancel-button"><a href = "/cancel-edit"><button type="submit" formaction="/cancel-edit" class = "cancel" id="cancel-button"> CANCEL </button></a></div>
+            </div>    
+
+        </div>
+    </div>
+</form>

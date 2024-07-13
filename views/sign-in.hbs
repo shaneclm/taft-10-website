@@ -1,0 +1,41 @@
+<div class="blue-div-sign-in">&nbsp;</div>
+<div class="sign-up">
+    <div class="welcome-container">
+        <a href="/home"><button class="button" id="back-button"> Back to Home Page </button></a>
+        <div class="heading">
+            <div class="welcome-message"> Welcome Back to </div>
+            <div class="taft-10"> Taft 10! </div>
+        </div>
+    </div>
+    <div class="sign-in-container">
+        <div class="sign-in-message">
+            <span id="message-1"> Sign In </span><br>
+            <span id="message-2"> Don't have an account yet? </span>
+            <a href="/sign-up" class="sign-up-link"> Sign Up </a>
+        </div>
+        <form method="post" action="/sign-in" class="sign-in-form">
+            <div class="fields-sign-in">
+                <label for="username"> Username </label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password"> Password </label>
+                <input type="password" name="password" id="password" />
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                <label for="checkbox"> Remember Me </label><br>
+            </div>
+
+            {{#if messages.error}}
+            <div class="forgot-password">
+                <a href="/forgot-pw" id="forgot-password-link">Incorrect Password. Click me to Reset</a>
+            </div>
+            {{/if}}
+            
+            <div class="submit-button">
+                <input type="submit" class="button" name="sign-up-submit" id="button-text" value="Sign In">
+            </div>
+            
+        </form>
+    </div>
+</div>
